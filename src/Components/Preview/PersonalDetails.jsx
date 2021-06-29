@@ -1,5 +1,5 @@
 function PersonalDetails(props) {
-  const { userDetails, setUserDetails } = props;
+  const { userDetails } = props;
   console.log(userDetails);
   return (
     <>
@@ -7,6 +7,8 @@ function PersonalDetails(props) {
         {userDetails.firstName}
         {userDetails.lastName}
         {userDetails.age}
+        {userDetails.address}
+        {userDetails.aboutMe}
       </p>
     </>
   );

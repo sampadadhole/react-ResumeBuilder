@@ -9,7 +9,8 @@ export default function App() {
     firstName: "",
     lastName: "",
     age: "",
-    address: ""
+    address: "",
+    aboutMe: ""
   });
 
   return (
