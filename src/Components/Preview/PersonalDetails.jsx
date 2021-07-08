@@ -1,6 +1,6 @@
 function PersonalDetails(props) {
   const { userDetails } = props;
-  console.log(userDetails);
+  // console.log(userDetails);
   return (
     <>
       <p>

@@ -1,6 +1,7 @@
 import React from "react";
+import Links from "./Links";
 function PersonalDetails(props) {
-  const { userDetails, setUserDetails } = props;
+  const { userDetails, setUserDetails, links, setLinks } = props;
   function handleFirstName(e) {
     setUserDetails({ ...userDetails, firstName: e.target.value });
   }
@@ -16,6 +17,7 @@ function PersonalDetails(props) {
   function handleAboutme(e) {
     setUserDetails({ ...userDetails, aboutMe: e.target.value });
   }
+
   return (
     <>
       <input type="text" placeholder="first name" onChange={handleFirstName} />
@@ -23,6 +25,12 @@ function PersonalDetails(props) {
       <input type="number" placeholder="age" onChange={handleAge} />
       <input type="text" placeholder="address" onChange={handleAddress} />
       <input type="text" placeholder="about me" onChange={handleAboutme} />
+      <Links
+        userDetails={userDetails}
+        setUserDetails={setUserDetails}
+        links={links}
+        setLinks={setLinks}
+      />
     </>
   );
 }
