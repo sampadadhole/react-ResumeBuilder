@@ -1,5 +1,7 @@
 import React from "react";
 import Links from "./Links";
+import styled from "styled-components";
+
 function PersonalDetails(props) {
   const { userDetails, setUserDetails, links, setLinks } = props;
   function handleFirstName(e) {
@@ -19,7 +21,7 @@ function PersonalDetails(props) {
   }
 
   return (
-    <>
+    <PersonalDetailsContainer>
       <input type="text" placeholder="first name" onChange={handleFirstName} />
       <input type="text" placeholder="last name" onChange={handleLastName} />
       <input type="number" placeholder="age" onChange={handleAge} />
@@ -31,8 +33,26 @@ function PersonalDetails(props) {
         links={links}
         setLinks={setLinks}
       />
-    </>
+    </PersonalDetailsContainer>
   );
 }
 
 export default PersonalDetails;
+
+const PersonalDetailsContainer = styled.div`
+display: flex;
+flex-direction: column;
+margin: 0.2rem 0.2rem;
+/* justify-content: end; */
+input{
+  margin: 15px 1rem;
+  padding: 15px 1rem;
+  border: none;
+  border-bottom: 0.2px solid;
+  background: transparent;
+}
+input:focus{
+  outline: none;
+  border-color: #F178B6;
+}
+`;
