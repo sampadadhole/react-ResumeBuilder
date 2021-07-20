@@ -13,6 +13,16 @@ export default function App() {
     address: "",
     aboutMe: ""
   });
+  const [WorkDetails, setWorkDetails] = useState({
+    EmployerName : "",
+    Role : "",
+    StartingFrom :"",
+    EndDate : "",
+    present : false,
+    description:""
+
+  })
+
 
   return (
     <div className="App">
@@ -21,6 +31,8 @@ export default function App() {
         setUserDetails={setUserDetails}
         links={links}
         setLinks={setLinks}
+        WorkDetails={WorkDetails}
+        setWorkDetails={setWorkDetails}
       />
       <Preview
         userDetails={userDetails}
